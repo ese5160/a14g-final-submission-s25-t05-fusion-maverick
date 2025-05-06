@@ -4,7 +4,7 @@
     * Team Number: T05
     * Team Name: Fusion Maverick
     * Team Members: Qingyang Xu, Ruizhe Wang, Xinyi Wang
-    * Github Repository URL: 
+    * Github Repository URL: https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick.git
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc) 
 
 ## 1. Video Presentation
