@@ -20,11 +20,13 @@
 ### Device Description
 We designed a magic wand for IoT-based environments, capable of remotely controlling electronic devices through gesture recognition. In our prototype, we used a motor and an LCD screen as actuators. The system also features an “echo back” mechanism, providing distinct haptic feedback via a haptic driver and vibration motor to confirm command execution.
 
+The project is inspired by the current smart home system. Instead of the mobile control via smart phone, we want to bring in more fun in the whole scheme. In addition, the magic wand could also be programmed as a laser cat teaser or a magic wand for children entertainment.
+
 <br>
 
 ### Device Functionality
 
-1. Design of the Internet-Connected Device
+1. Design of the Internet-Connected Device:
 
     The system is composed of two custom-designed PCB modules: the Wand Module and the Actuator Module.
 
@@ -35,6 +37,8 @@ We designed a magic wand for IoT-based environments, capable of remotely control
     The Actuator Module, which maintains an active Wi-Fi Internet connection, receives this command and performs the appropriate action using motor and LCD.
 
     After execution, the actuator sends feedback to confirm task completion, which is communicated back to the user via a vibration motor on the wand.
+
+<br>
 
 2. Sensors, Actuators, and Key Components:
 
@@ -51,6 +55,11 @@ We designed a magic wand for IoT-based environments, capable of remotely control
       * LCD Screen – Displays animations or task-related visuals.
       * Motor – Executes the received command from the wand module. The speed can be changed.
       * State LED – Indicates task activity status (on during task execution, off when idle);  also serves as a debugging tool.
+  
+      <br>
+
+
+    ![blcok](/images/Block_diagram1.jpg)
 
 <br>
 
