@@ -24,9 +24,44 @@ We designed a magic wand in the application of IoT-based environments, capable o
 
 ### Device Functionality
 
+1.  Design of the Internet-Connected Device
+
+    The system is composed of two custom-designed PCB modules: the Wand Module and the Actuator Module.
+
+    The Wand Module detects hand gestures using an onboard IMU and activates only when the force-sensitive resistor (FSR) is pressed, minimizing unintended gesture recognition.
+
+    Once a gesture is recognized, the microcontroller processes the data and transmits the corresponding command to the cloud via Wi-Fi.
+
+    The Actuator Module, which maintains an active Wi-Fi Internet connection, receives this command and performs the appropriate action using motor and LCD.
+
+    After execution, the actuator sends feedback to confirm task completion, which is communicated back to the user via a vibration motor on the wand.
+
+2.  Sensors, Actuators, and Key Components
+Wand PCB:
+
+Slide Switch – Powers the wand on/off.
+
+Force-Sensitive Resistor (FSR) – Enables gesture recognition only with intentional input.
+
+Inertial Measurement Unit (IMU) – Detects motion and captures gesture patterns.
+
+NeoPixel LED Strip – Provides visual animation feedback upon command transmission.
+
+Vibration Motor – Delivers haptic feedback when a task is confirmed as complete.
+
+Actuator PCB:
+
+LCD Screen – Displays animations or task-related visuals.
+
+Motor – Executes the received command from the wand module. The speed can be changed.
+
+State LED – Indicates task activity status (on during task execution, off when idle);  also serves as a debugging tool.
+
 ### Challenges
 
 The difficulties we encountered lies in two aspects: MQTT communications between two devices with the introduction of Node-RED and the stack/memory allocation among different threads/tasks.
+
+For the MQTT communications problem, we aimed to achieve both end-to-end/device-to-device control and cloud control, then we need to tackle with the potential conflicts. We used 
 
 For the 
 
