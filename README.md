@@ -68,7 +68,7 @@
 
         * HR010 - external-connected LCD shall be used as the other actuator.<br>
         The LCD would have two function modes, one is the visulization of motor control, which would reflect the motion state of the motor, such as, as the rotation speed increase, the LCD will display volume up animation.<br>
-        In addition, the LCD would solely interact with the magic wand, such as the LCD will antimate a wave pattern when wand has a 'Tilde' tranjectory gesture, and animate a twinkle with respect to wand 'Zigzag' tranjectory gesture.
+        In addition, the LCD would solely interact with the magic wand, such as the LCD will antimate a wave pattern when wand has a 'Wave' tranjectory gesture, and animate a twinkle with respect to wand 'Zigzag' tranjectory gesture.
 
 <br>
 
@@ -99,40 +99,81 @@
     * SR04 - LED strip based command emission.<br>
         - configued as a digital output;
         - a LED strip will be programmed to flash simultaneously when the control demand is sent out after correct gesture recogonition.<br>
-        Neopixel library will be utilized for this implmentation.
+        Neopixel library is utilized for this implmentation.
 
     <br>
 
     * SR05 - actuartor execution.
-        - the corresponding actuator(determined by the pre-defined gestures) will response to the magic wand instruction, execute the command and send feedback to the cloud to actiavte the vibration motor on the wand;<br>
-            * state LED(configued as a a digital output): keep off while no command, turned on when received the command and turned off when the tasks are successfully executed.
-            * motor(drived by DRV8874 motor driver, configued as several digital I/Os):
+        - the corresponding actuator(determined by the pre-defined gestures) will response to the magic wand gesture, executing the command and then sending feedback to the cloud to actiavte the vibration motor on the wand;<br>
+            * state LED, configued as a a digital output:<br> 
+            keep off while no command, turned on when received the command and turned off when the tasks are successfully executed.
+            * micro metal gear motor, drived by DRV8874 motor driver, configued as one analogue output(PWM) and two digital outputs:
                 * activation: clockwise circle drawn by the wand;
                 * brake: anticlockwise circle drawn by the wand;
                 * accelerate: wand swipes up;
                 * decelerate: wand swipes down.
-            * LCD(configued as a SPI(SERCOM0) + several digital I/Os):
-                * mode 1: visulization of motor motion state:
+            * LCD, configued as a SPI(SERCOM0) and several digital I/Os:
+                * mode 1 - visulization of motor motion state:
                     * motor accelerates: volume up animation;
                     * motor decelerates: volume down animation.
-                * mode 2: intaction with wand:<br>
-                the LCD would solely interact with the wand. For instance, the LCD will animate a twinkle with respect to wand 'Zigzag' tranjectory gesture; the LCD will angimate a wave pattern with respect to wand Tilde' tranjectory gesture.
+                * mode 2 - intaction with wand:<br>
+                the LCD would solely interact with the wand. 
+                  * the LCD will animates a twinkle with respect to wand 'Zigzag' tranjectory gesture;<br> 
+                  * the LCD animates a wave pattern with respect to wand 'Wave' tranjectory gesture.
 
     <br>
         
     * SR06 - vibration motor based actuator exection feedback.<br>
-        - drived by DRV2605L haptic motor controller, configured as an I2C(SERCOM3) + one digital output
+        - drived by DRV2605L haptic motor controller, configured as an I2C(SERCOM3) and one digital output.
         - a vibration motor will be activated for about few seconds once the control demand has been successfully received and executed by the actuator. We proposed varying vibration effects/modes of the motor with respect to diffrent task accomplishment. The tentative way we're going to execute it is:
             * LCD tasks --- Vibration Motor Soft Bump - 100% (Effect NO.7);
             * Motor ON/OFF --- Vibration Motor Strong Click - 60% (Effect NO.2);
             * Motor SPEED UP --- Vibration Motor Strong Buzz - 100% (Effect NO.14);
             * Motor SLOW DOWN --- Vibration Motor 1000 ms Alert 100% (Effect NO.16).
+    
+    <br>
+        
+    * SR07 - Node-RED interface and interaction.<br>
+        - Node-RED interface will take in the IMU gesture and actuator motion feedback JSON MQTT messages and print out in the UI dashboard.
+        - In addition, we also enable Node-RED to directly control the actuator via different buttons.
 
 
 <br>
 <br>
 
 ## 4. Project Photos & Screenshots
+
+* ***Framework of the boards:***
+  * <u>*whole case:*</u>
+    ![whole](/images/whole_case.jpg)
+
+  * <u>*magic wand case and its inner:*</u>
+    ![MW](/images/magic-wand_case.jpg)
+    ![MW_IN](/images/magic-wand_inner.jpg)
+    ![MW_UP](/images/magic-wand_case-up.jpg)
+    ![MW_BOTTOM](/images/magic-wand_case-bottom.jpg)
+
+  * <u>*actuator case:*</u>
+    ![ATT](/images/actuator_inner.jpg)
+    ![ATT-case](/images/actuator_case.jpg)
+
+<br>
+
+* ***The standalone PCBA, top:***
+  * <u>*magic wand:*</u>
+    ![mw_pcb-up](/images/mw-frontend.jpg)
+
+  * <u>*actuator:*</u>
+    ![att_pcb-up](/images/whole_case.jpg)
+
+<br>
+
+* ***The standalone PCBA, tobottomp:***
+  * <u>*magic wand:*</u>
+    ![whole](/images/whole_case.jpg)
+
+  * <u>*actuator:*</u>
+    ![whole](/images/whole_case.jpg)
 
 ## Codebase
 
