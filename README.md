@@ -228,8 +228,9 @@ For the stack/memory allocation challenge, we mainly resolved by using the debug
     ![MW_UP](/images/magic-wand_case-up.jpg)
     ![MW_BOTTOM](/images/magic-wand_case-bottom.jpg)
 
-  * <u>*actuator case:*</u>
-    ![ATT](/images/actuator_inner.jpg)
+  * <u>*actuator case and its inner:*</u>
+  * ![ATT](/images/actuator_case-real.jpg)
+    ![ATT_IN](/images/actuator_inner.jpg)
     ![ATT-case](/images/actuator_case.jpg)
 
 <br>
@@ -277,7 +278,7 @@ For the stack/memory allocation challenge, we mainly resolved by using the debug
     ![mw_pcb-2d](/images/mw_3d-layout.png)
 
   * <u>*actuator:*</u>
-    ![att_pcb-2d](/images/mw_3d-layout.png)
+    ![att_pcb-2d](/images/att_3d-layout.png)
 
 <br>
 
