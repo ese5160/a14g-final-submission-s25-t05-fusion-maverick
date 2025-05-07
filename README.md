@@ -24,7 +24,7 @@ We designed a magic wand in the application of IoT-based environments, capable o
 
 ### Device Functionality
 
-1.  Design of the Internet-Connected Device
+1. Design of the Internet-Connected Device
 
     The system is composed of two custom-designed PCB modules: the Wand Module and the Actuator Module.
 
@@ -36,34 +36,31 @@ We designed a magic wand in the application of IoT-based environments, capable o
 
     After execution, the actuator sends feedback to confirm task completion, which is communicated back to the user via a vibration motor on the wand.
 
-2.  Sensors, Actuators, and Key Components
-Wand PCB:
+2. Sensors, Actuators, and Key Components:
 
-Slide Switch – Powers the wand on/off.
+    * Magic Wand PCB:
+  
+      * Slide Switch – Powers the wand on/off.
+      * Force-Sensitive Resistor (FSR) – Enables gesture recognition only with intentional input.
+      * Inertial Measurement Unit (IMU) – Detects motion and captures gesture patterns.
+      * NeoPixel LED Strip – Provides visual animation feedback upon command transmission.
+      * Vibration Motor – Delivers haptic feedback when a task is confirmed as complete.
 
-Force-Sensitive Resistor (FSR) – Enables gesture recognition only with intentional input.
+    * Actuator PCB:
 
-Inertial Measurement Unit (IMU) – Detects motion and captures gesture patterns.
+      * LCD Screen – Displays animations or task-related visuals.
+      * Motor – Executes the received command from the wand module. The speed can be changed.
+      * State LED – Indicates task activity status (on during task execution, off when idle);  also serves as a debugging tool.
 
-NeoPixel LED Strip – Provides visual animation feedback upon command transmission.
-
-Vibration Motor – Delivers haptic feedback when a task is confirmed as complete.
-
-Actuator PCB:
-
-LCD Screen – Displays animations or task-related visuals.
-
-Motor – Executes the received command from the wand module. The speed can be changed.
-
-State LED – Indicates task activity status (on during task execution, off when idle);  also serves as a debugging tool.
+<br>
 
 ### Challenges
 
 The difficulties we encountered lies in two aspects: MQTT communications between two devices with the introduction of Node-RED and the stack/memory allocation among different threads/tasks.
 
-For the MQTT communications problem, we aimed to achieve both end-to-end/device-to-device control and cloud control, then we need to tackle with the potential conflicts. We used 
+For the MQTT communications problem, we aimed to achieve both end-to-end/device-to-device control and cloud control, then we need to tackle with the potential conflicts. We modified the Node-RED interface setting(specifically, function with multiple buttons architecture) to allow both control scheme and ensure no mutual influence against each other.
 
-For the 
+For the stack/memory allocation challenge, we mainly resolved by using the debug mode and Percepio to measure the CPU usage of each thread/task and their occupation with respect to the whole progress, so that distribute adequate stack/memory for each thread/task.
 
 
 <br>
