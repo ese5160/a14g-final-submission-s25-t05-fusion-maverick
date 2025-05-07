@@ -8,19 +8,38 @@
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc) 
 
 ## 1. Video Presentation
- a
+
+* link to [demonstration video](https://drive.google.com/file/d/1YWnVmKI_Hek0KSYINU-ZehtNLYqbIGeL/view?usp=drive_link).
+
+<br>
+<br>
+
+
 ## 2. Project Summary
+
 ### Device Description
+We designed a magic wand in the application of IoT-based environments, capable of using gestures to remote control any electronics (we used motor and LCD as actuators here) allowing the introduction of IoT-networking.
+
+<br>
 
 ### Device Functionality
 
 ### Challenges
 
 ### Prototype Learnings
+We learned the importance of early testing with real hardware and dev board. Also we learned the importance of planning for edge cases and hardware redundancy. For example, we added test pads to unused pins so they could serve as backups if any primary connections failed
+
+What we would do differently:
+We would try to use DMA for SPI communication when wrting the LCD library. We would also design a 3D-printed parts earlier to make them better fit our PCBs.
 
 ### Next Steps & Takeaways
 
 ### Project Links
+
+* Node-RED URL:  http://52.191.130.70:1880/.
+* Node_RED UI:  http://52.191.130.70:1880/ui/.
+* Altium 365 Workspace_Magic Wand: [ESE5160_T05_magic-wand](https://upenn-eselabs.365.altium.com/designs/561D65B4-5675-46F1-8598-4B78714B2637#design)
+* Altium 365 Workspace_Actuator: [ESE516_T05_actuator](https://upenn-eselabs.365.altium.com/designs/F3D984D3-5DE9-4F6E-BA4E-46D2DB081462#design)
 
 
 ## 3. Hardware & Software Requirements
@@ -230,7 +249,7 @@
 
 ## Codebase
 
-* link to your final embedded C firmware codebases
-* link to your [Node-RED dashboard code](https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick/blob/1c47a3a814a5b3925147e226cab0708e4901a165/T05%20Fusion%20Maverick.json).
+* link to final embedded C firmware codebases
+* link to [Node-RED dashboard code](https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick/blob/1c47a3a814a5b3925147e226cab0708e4901a165/T05%20Fusion%20Maverick.json).
 
 
