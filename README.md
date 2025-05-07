@@ -18,7 +18,7 @@
 ## 2. Project Summary
 
 ### Device Description
-We designed a magic wand in the application of IoT-based environments, capable of using gestures to remote control any electronics (we used motor and LCD as actuators here) with "echo back" (we used haptic driver + vibration motor to provide different motion feedback).
+We designed a magic wand for IoT-based environments, capable of remotely controlling electronic devices through gesture recognition. In our prototype, we used a motor and an LCD screen as actuators. The system also features an “echo back” mechanism, providing distinct haptic feedback via a haptic driver and vibration motor to confirm command execution.
 
 <br>
 
