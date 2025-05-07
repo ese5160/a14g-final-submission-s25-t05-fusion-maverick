@@ -9,7 +9,7 @@
 
 ## 1. Video Presentation
 
-[![Watch the video](/images/whole_case.jpg)](https://drive.google.com/file/d/1YWnVmKI_Hek0KSYINU-ZehtNLYqbIGeL/view?usp=drive_link)
+[![Watch the video](/images/whole_case.jpg)](https://drive.google.com/file/d/1vp4sP6hECi1O-d0wfQKW0Ko0fJEJ-row/view?usp=sharing)
 
 <br>
 <br>
@@ -228,65 +228,65 @@ For the stack/memory allocation challenge, we mainly resolved by using the debug
 ## 4. Project Photos & Screenshots
 
 * ***Framework of the boards:***
-  * <u>*whole case:*</u>
+  * <u><i>whole case:</i></u>
     ![whole](/images/whole_case.jpg)
 
-  * <u>*magic wand case and its inner:*</u>
+  * <u><i>magic wand case and its inner:</i></u>
     ![MW](/images/magic-wand_case.jpg)
     ![MW_IN](/images/magic-wand_inner.jpg)
     ![MW_UP](/images/magic-wand_case-up.jpg)
     ![MW_BOTTOM](/images/magic-wand_case-bottom.jpg)
 
-  * <u>*actuator case and its inner:*</u>
-  * ![ATT](/images/actuator_case-real.jpg)
+  * <u><i>actuator case and its inner:</i></u>
+    ![ATT](/images/actuator_case-real.jpg)
     ![ATT_IN](/images/actuator_inner.jpg)
     ![ATT-case](/images/actuator_case.jpg)
 
 <br>
 
 * ***The standalone PCBA, top:***
-  * <u>*magic wand:*</u>
+  * <u><i>magic wand:</i></u>
     ![mw_pcb-up](/images/mw-frontend.jpg)
 
-  * <u>*actuator:*</u>
+  * <u><i>actuator:</i></u>
     ![att_pcb-up](/images/att-frontend.jpg)
 
 <br>
 
 * ***The standalone PCBA, bottomp:***
-  * <u>*magic wand:*</u>
+  * <u><i>magic wand:</i></u>
     ![mw_pcb-bottom](/images/mw-backend.jpg)
 
-  * <u>*actuator:*</u>
+  * <u><i>actuator:</i></u>
     ![att_pcb-bottom](/images/att-backend.jpg)
 
 <br>
 
 * ***Thermal camera images of boards under load:***
-  * <u>*magic wand:*</u>
+  * <u><i>magic wand:</i></u>
   
     ![thermal-mw](/images/mw_thermal.jpg)
 
-  * <u>*actuator:*</u>
+  * <u><i>actuator:</i></u>
 
     ![thermal-att](/images/att_thermal.jpg)
 
 <br>
 
 * ***Altium Designer board layout 2D view:***
-  * <u>*magic wand:*</u>
+  * <u><i>magic wand:</i></u>
     ![mw_pcb-2d](/images/mw_2d-layout.png)
 
-  * <u>*actuator:*</u>
+  * <u><i>actuator:</i></u>
     ![att_pcb-2d](/images/att_2d-layout.png)
 
 <br>
 
 * ***Altium Designer board layout 3D view:***
-  * <u>*magic wand:*</u>
+  * <u><i>magic wand:</i></u>
     ![mw_pcb-2d](/images/mw_3d-layout.png)
 
-  * <u>*actuator:*</u>
+  * <u><i>actuator:</i></u>
     ![att_pcb-2d](/images/att_3d-layout.png)
 
 <br>
