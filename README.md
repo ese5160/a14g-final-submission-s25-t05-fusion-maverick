@@ -9,7 +9,7 @@
 
 ## 1. Video Presentation
 
-* link to [demonstration video](https://drive.google.com/file/d/1YWnVmKI_Hek0KSYINU-ZehtNLYqbIGeL/view?usp=drive_link).
+[![Watch the video](/images/whole_case.jpg)](https://drive.google.com/file/d/1YWnVmKI_Hek0KSYINU-ZehtNLYqbIGeL/view?usp=drive_link)
 
 <br>
 <br>
