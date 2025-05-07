@@ -18,7 +18,7 @@
 ## 2. Project Summary
 
 ### Device Description
-We designed a magic wand in the application of IoT-based environments, capable of using gestures to remote control any electronics (we used motor and LCD as actuators here) allowing the introduction of IoT-networking.
+We designed a magic wand in the application of IoT-based environments, capable of using gestures to remote control any electronics (we used motor and LCD as actuators here) with "echo back" (we used haptic driver + vibration motor to provide different motion feedback).
 
 <br>
 
@@ -26,21 +26,47 @@ We designed a magic wand in the application of IoT-based environments, capable o
 
 ### Challenges
 
-### Prototype Learnings
-We learned the importance of early testing with real hardware and dev board. Also we learned the importance of planning for edge cases and hardware redundancy. For example, we added test pads to unused pins so they could serve as backups if any primary connections failed
+The difficulties we encountered lies in two aspects: MQTT communications between two devices with the introduction of Node-RED and the stack/memory allocation among different threads/tasks.
 
-What we would do differently:
-We would try to use DMA for SPI communication when wrting the LCD library. We would also design a 3D-printed parts earlier to make them better fit our PCBs.
+For the 
+
+
+<br>
+
+### Prototype Learnings
+
+* Lessons learned:
+
+    We learned the importance of early testing with real hardware and dev board for all sensors and actuators. Also we learned the importance of planning for edge cases and hardware redundancy. For example, we added test pads to unused pins so they could serve as backups if any primary connections failed. 
+
+* What we would do differently:
+
+    We would try to use DMA for SPI communication when wrting the LCD library. We would also design the 3D-printed parts earlier to make them better fit our PCBs. We might also design two firmware versions so that we can see the difference when we update the OTAFU.
+
+<br>
 
 ### Next Steps & Takeaways
+
+* Steps to Finish/Improve the Project:
+
+    We plan to refine the IMU gesture recognition algorithm using machine learning models to improve accuracy. We also aim to optimize the firmware architecture by consolidating all tasks into Wi-Fi-related modules. This restructuring is expected to reduce memory usage and potentially resolve the system freeze issue.
+
+* What We Learned in ESE5160:
+
+    This project significantly deepened our understanding of embedded IoT systems, covering the entire development cycle—from PCB design and sensor integration to firmware development and real-world testing. Through hands-on experience, we gained a better appreciation of the challenges involved in building reliable and user-friendly connected devices. It not only reinforced our theoretical knowledge but also sharpened our practical engineering skills, such as FreeRTOS task scheduling and hardware-software interfacing. Most importantly, we developed strong debugging capabilities, learning how to systematically identify issues using debug mode, an oscilloscope, or a logic analyzer, trace root causes, and implement effective solutions under real-world constraints.
+
+<br>
 
 ### Project Links
 
 * Node-RED URL:  http://52.191.130.70:1880/.
 * Node_RED UI:  http://52.191.130.70:1880/ui/.
-* Altium 365 Workspace_Magic Wand: [ESE5160_T05_magic-wand](https://upenn-eselabs.365.altium.com/designs/561D65B4-5675-46F1-8598-4B78714B2637#design)
-* Altium 365 Workspace_Actuator: [ESE516_T05_actuator](https://upenn-eselabs.365.altium.com/designs/F3D984D3-5DE9-4F6E-BA4E-46D2DB081462#design)
+* Altium 365 Workspace_Magic Wand: [ESE5160_T05_magic-wand](https://upenn-eselabs.365.altium.com/designs/561D65B4-5675-46F1-8598-4B78714B2637#design).
+* Altium 365 Workspace_Actuator: [ESE516_T05_actuator](https://upenn-eselabs.365.altium.com/designs/F3D984D3-5DE9-4F6E-BA4E-46D2DB081462#design).
 
+
+<br>
+<br>
 
 ## 3. Hardware & Software Requirements
 * <b><i>Hardware Requirements:</i></b>
@@ -90,8 +116,6 @@ We would try to use DMA for SPI communication when wrting the LCD library. We wo
         In addition, the LCD would solely interact with the magic wand, such as the LCD will antimate a wave pattern when wand has a 'Wave' tranjectory gesture, and animate a twinkle with respect to wand 'Zigzag' tranjectory gesture.
 
 <br>
-
-
 
 * <b><i>SRS:</i></b>
     * SR01 - slide switch on/off.<br>
@@ -249,7 +273,8 @@ We would try to use DMA for SPI communication when wrting the LCD library. We wo
 
 ## Codebase
 
-* link to final embedded C firmware codebases
+* link to final embedded C firmware codebases:
+  * [Magic Wand](https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick/tree/845671977ecdd8a734ac7d07e15a0bec73a7ee73/code_MW).
+  * [Actuator](https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick/tree/845671977ecdd8a734ac7d07e15a0bec73a7ee73/code_A).
+
 * link to [Node-RED dashboard code](https://github.com/ese5160/a14g-final-submission-s25-t05-fusion-maverick/blob/1c47a3a814a5b3925147e226cab0708e4901a165/T05%20Fusion%20Maverick.json).
-
-
