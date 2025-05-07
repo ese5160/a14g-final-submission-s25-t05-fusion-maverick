@@ -1,0 +1,951 @@
+[
+    {
+        "id": "d4247148e23c5e0e",
+        "type": "tab",
+        "label": "Magic_Control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "441b593eeaaaa6e7",
+        "type": "tab",
+        "label": "Motion_Feedback",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6bd40569dd83bc7e",
+        "type": "tab",
+        "label": "OTAFW",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dde4eb74cf10c82e",
+        "type": "tab",
+        "label": "RESET",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8fde701c.6c6c3",
+        "type": "mqtt-broker",
+        "name": "AzureMqttBroker",
+        "broker": "52.191.130.70",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3dd7f020.68187",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Arial,Arial,Helvetica,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial,Arial,Helvetica,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 4,
+                "gy": 4,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c74df315669b8089",
+        "type": "ui_tab",
+        "name": "ESE5160 Project_T05 Fusion Maverick",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "343052a2234c6b9e",
+        "type": "ui_group",
+        "name": "Magic Wand",
+        "tab": "c74df315669b8089",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "389726a4fb0deee7",
+        "type": "ui_group",
+        "name": "Actuator",
+        "tab": "c74df315669b8089",
+        "order": 2,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b837546484cc338e",
+        "type": "ui_group",
+        "name": "OTAFU",
+        "tab": "c74df315669b8089",
+        "order": 3,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9399c4c8854bce03",
+        "type": "ui_group",
+        "name": "RESET",
+        "tab": "c74df315669b8089",
+        "order": 4,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3dc636773b5e6de0",
+        "type": "mqtt in",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "topic": "IMU_GESTURE",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "71c58d2f656cb215",
+                "34ffd43c776910c6",
+                "8127eebf6f190477"
+            ]
+        ]
+    },
+    {
+        "id": "34ffd43c776910c6",
+        "type": "debug",
+        "z": "d4247148e23c5e0e",
+        "name": "IMU reading",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 350,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "71c58d2f656cb215",
+        "type": "json",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "7b9f124ecd9e7e05"
+            ]
+        ]
+    },
+    {
+        "id": "7b9f124ecd9e7e05",
+        "type": "ui_text",
+        "z": "d4247148e23c5e0e",
+        "group": "343052a2234c6b9e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "IMU Gesture",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e5efdd547f146f95",
+        "type": "comment",
+        "z": "d4247148e23c5e0e",
+        "name": "Magic wand demand channel",
+        "info": "",
+        "x": 160,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8127eebf6f190477",
+        "type": "function",
+        "z": "d4247148e23c5e0e",
+        "name": "function 1",
+        "func": "var on = { payload: true };\nvar off = null;\n\n\nif (msg.payload === \"Zigzag\") {\n    return [on, off, off, off, off, off];\n\n}\nelse if (msg.payload === \"Wave\") {\n    return [off, on, off, off, off, off];\n\n}\nelse if (msg.payload === \"Clockwise\") {\n    return [off, off, on, off, off, off];\n\n}\nelse if (msg.payload === \"Anticlockwise\") {\n    return [off, off, off, on, off, off];\n\n}\nelse if (msg.payload === \"Up\") {\n    return [off, off, off, off, on, off];\n\n}\nelse if (msg.payload === \"Down\") {\n    return [off, off, off, off, off, on];\n\n}",
+        "outputs": 6,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "bff302a9f3c037bf"
+            ],
+            [
+                "74e4701b91eecff0"
+            ],
+            [
+                "42d94592f4e04b53"
+            ],
+            [
+                "fd6fe72167f90be3"
+            ],
+            [
+                "c0c6c5a1c79e7677"
+            ],
+            [
+                "cff298f087e5d24e"
+            ]
+        ]
+    },
+    {
+        "id": "bff302a9f3c037bf",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Zigzag",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Zigzag\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "74e4701b91eecff0",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Wave",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Wave\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "42d94592f4e04b53",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clockwise",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Clockwise\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 560,
+        "y": 380,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "fd6fe72167f90be3",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Anticlockwise",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Anticlockwise\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 580,
+        "y": 440,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "c0c6c5a1c79e7677",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Swipe Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Up\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "cff298f087e5d24e",
+        "type": "ui_button",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "group": "343052a2234c6b9e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Swipe Down",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Gesture\":\"Down\"}",
+        "payloadType": "json",
+        "topic": "IMU_GESTURE_OUT",
+        "topicType": "msg",
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "822d1c97f58e1301",
+                "5f7355111da511bb"
+            ]
+        ]
+    },
+    {
+        "id": "822d1c97f58e1301",
+        "type": "mqtt out",
+        "z": "d4247148e23c5e0e",
+        "name": "",
+        "topic": "IMU_GESTURE_OUT",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5f7355111da511bb",
+        "type": "debug",
+        "z": "d4247148e23c5e0e",
+        "name": "Magic Wand command",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1f2582657fef7c2f",
+        "type": "mqtt in",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "topic": "MOTION_FEEDBACK",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "31200abb23811662",
+                "1731d472a9dd3dfe",
+                "c5b19de36e62c49b"
+            ]
+        ]
+    },
+    {
+        "id": "1731d472a9dd3dfe",
+        "type": "debug",
+        "z": "441b593eeaaaa6e7",
+        "name": "Actuator feedback",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "31200abb23811662",
+        "type": "json",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "d1239041b4bb033f"
+            ]
+        ]
+    },
+    {
+        "id": "d1239041b4bb033f",
+        "type": "ui_text",
+        "z": "441b593eeaaaa6e7",
+        "group": "389726a4fb0deee7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Motion Feedback",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "aad2e37a79ac0ec7",
+        "type": "comment",
+        "z": "441b593eeaaaa6e7",
+        "name": "Actuator motion feedback channel",
+        "info": "",
+        "x": 220,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c5b19de36e62c49b",
+        "type": "function",
+        "z": "441b593eeaaaa6e7",
+        "name": "function 2",
+        "func": "var on = { payload: true };\nvar off = null;\n\n\nif (msg.payload === \"LCD_TASK\") {\n    return [on, off, off, off];\n\n}\nelse if (msg.payload === \"MOTOR_ACTIVATION\") {\n    return [off, on, off, off];\n\n}\nelse if (msg.payload === \"SPEED_UP\") {\n    return [off, off, on, off];\n\n}\nelse if (msg.payload === \"SLOW_DOWN\") {\n    return [off, off, off, on];\n\n}",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "0ef3420116551557"
+            ],
+            [
+                "90425fc2208a1a61"
+            ],
+            [
+                "8b58f2bfb1af6256"
+            ],
+            [
+                "04cd804815309c55"
+            ]
+        ]
+    },
+    {
+        "id": "0ef3420116551557",
+        "type": "ui_button",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "group": "389726a4fb0deee7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "LCD Feedback",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Feedback\":\"LCD_TASK\"}",
+        "payloadType": "json",
+        "topic": "MOTION_FEEDBACK_OUT",
+        "topicType": "msg",
+        "x": 640,
+        "y": 340,
+        "wires": [
+            [
+                "7bab76e817a16e6a",
+                "ccbcefefbef753e3"
+            ]
+        ]
+    },
+    {
+        "id": "90425fc2208a1a61",
+        "type": "ui_button",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "group": "389726a4fb0deee7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Motor State",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Feedback\":\"MOTOR_ACTIVATION\"}",
+        "payloadType": "json",
+        "topic": "MOTION_FEEDBACK_OUT",
+        "topicType": "msg",
+        "x": 630,
+        "y": 400,
+        "wires": [
+            [
+                "7bab76e817a16e6a",
+                "ccbcefefbef753e3"
+            ]
+        ]
+    },
+    {
+        "id": "8b58f2bfb1af6256",
+        "type": "ui_button",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "group": "389726a4fb0deee7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Speed up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Feedback\":\"SPEED_UP\"}",
+        "payloadType": "json",
+        "topic": "MOTION_FEEDBACK_OUT",
+        "topicType": "msg",
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "7bab76e817a16e6a",
+                "ccbcefefbef753e3"
+            ]
+        ]
+    },
+    {
+        "id": "7bab76e817a16e6a",
+        "type": "mqtt out",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "topic": "MOTION_FEEDBACK_OUT",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 940,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "04cd804815309c55",
+        "type": "ui_button",
+        "z": "441b593eeaaaa6e7",
+        "name": "",
+        "group": "389726a4fb0deee7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Slow Down",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"Feedback\":\"SLOW_DOWN\"}",
+        "payloadType": "json",
+        "topic": "MOTION_FEEDBACK_OUT",
+        "topicType": "msg",
+        "x": 630,
+        "y": 520,
+        "wires": [
+            [
+                "7bab76e817a16e6a",
+                "ccbcefefbef753e3"
+            ]
+        ]
+    },
+    {
+        "id": "ccbcefefbef753e3",
+        "type": "debug",
+        "z": "441b593eeaaaa6e7",
+        "name": "Motion feedback delivery",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a67cac4b74119675",
+        "type": "ui_button",
+        "z": "6bd40569dd83bc7e",
+        "name": "",
+        "group": "b837546484cc338e",
+        "order": 0,
+        "width": "4",
+        "height": "2",
+        "passthru": false,
+        "label": "OTAFU",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "fw",
+        "payloadType": "str",
+        "topic": "OTAFW",
+        "topicType": "msg",
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "49213eb15e1cb0af"
+            ]
+        ]
+    },
+    {
+        "id": "49213eb15e1cb0af",
+        "type": "mqtt out",
+        "z": "6bd40569dd83bc7e",
+        "name": "",
+        "topic": "OTAFW",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b20a37c33a7dd628",
+        "type": "comment",
+        "z": "6bd40569dd83bc7e",
+        "name": "Online Firmware Updates",
+        "info": "",
+        "x": 270,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d693589f3ae80bce",
+        "type": "mqtt out",
+        "z": "dde4eb74cf10c82e",
+        "name": "",
+        "topic": "REMOTE_RESET",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "bdb61dc2c449e371",
+        "type": "ui_button",
+        "z": "dde4eb74cf10c82e",
+        "name": "",
+        "group": "9399c4c8854bce03",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "MAGIC-WAND_RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "MW_reset",
+        "payloadType": "str",
+        "topic": "REMOTE_RESET",
+        "topicType": "msg",
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "d693589f3ae80bce"
+            ]
+        ]
+    },
+    {
+        "id": "5092ebdfc32db791",
+        "type": "ui_button",
+        "z": "dde4eb74cf10c82e",
+        "name": "",
+        "group": "9399c4c8854bce03",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "ACTUATOR_RESET",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ATT_reset",
+        "payloadType": "str",
+        "topic": "REMOTE_RESET",
+        "topicType": "msg",
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "d693589f3ae80bce"
+            ]
+        ]
+    },
+    {
+        "id": "c1f19683b47a2b2a",
+        "type": "comment",
+        "z": "dde4eb74cf10c82e",
+        "name": "Online Reset",
+        "info": "",
+        "x": 330,
+        "y": 160,
+        "wires": []
+    }
+]

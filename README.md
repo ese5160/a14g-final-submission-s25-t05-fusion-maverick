@@ -164,16 +164,69 @@
     ![mw_pcb-up](/images/mw-frontend.jpg)
 
   * <u>*actuator:*</u>
-    ![att_pcb-up](/images/whole_case.jpg)
+    ![att_pcb-up](/images/att-frontend.jpg)
 
 <br>
 
-* ***The standalone PCBA, tobottomp:***
+* ***The standalone PCBA, bottomp:***
   * <u>*magic wand:*</u>
-    ![whole](/images/whole_case.jpg)
+    ![mw_pcb-bottom](/images/mw-backend.jpg)
 
   * <u>*actuator:*</u>
-    ![whole](/images/whole_case.jpg)
+    ![att_pcb-bottom](/images/att-backend.jpg)
+
+<br>
+
+* ***Thermal camera images of boards under load:***
+  * <u>*magic wand:*</u>
+  
+    ![thermal-mw](/images/mw_thermal.jpg)
+
+  * <u>*actuator:*</u>
+
+    ![thermal-att](/images/att_thermal.jpg)
+
+<br>
+
+* ***Altium Designer board layout 2D view:***
+  * <u>*magic wand:*</u>
+    ![mw_pcb-2d](/images/mw_2d-layout.png)
+
+  * <u>*actuator:*</u>
+    ![att_pcb-2d](/images/att_2d-layout.png)
+
+<br>
+
+* ***Altium Designer board layout 3D view:***
+  * <u>*magic wand:*</u>
+    ![mw_pcb-2d](/images/mw_3d-layout.png)
+
+  * <u>*actuator:*</u>
+    ![att_pcb-2d](/images/mw_3d-layout.png)
+
+<br>
+
+* ***Node-RED dashboard:***
+![node-red dash blank](/images/node-red_dash-blank.png)
+![node-red dash](/images/node-red_dash.png)
+
+<br>
+
+* ***Node-RED backend:***
+![mw](/images/node-red_mw.png)
+![att](/images/node-red_att.png)
+![otafu](/images/node-red_otafu.png)
+![reset](/images/node-red_reset.png)
+
+<br>
+
+* ***Block diagram:***
+![blcok 1](/images/Block_diagram1.jpg)
+![blcok 2](/images/Block_diagram2.jpg)
+
+
+<br>
+<br>
 
 ## Codebase
 
